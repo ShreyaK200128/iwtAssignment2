@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Question 24</title>
+    </head>
+    <body>
+        <div>
+            <form>
+                <input type="number" placeholder="Input">
+                <select>
+                <option>C</option>
+                <option>F</option>
+                <option>K</option>
+                </select>
+                <input type="number" placeholder="Output">
+                <select>
+                <option>C</option>
+                <option>F</option>
+                <option>K</option>
+                </select>
+            </form>
+            <button onclick="convert()">Convert</button>
+            <script>
+                function convert() {
+                    input=document.forms[0].elements[0].value;
+                    inOp=document.forms[0].elements[1].value;
+                    outOp=document.forms[0].elements[3].value;
+                    i=parseFloat(input);
+                    if(inOp=='C' && outOp=='K')
+                    {
+                        res=i+273;
+                    }
+                    else if(inOp=='C' && outOp=='F')
+                    {
+                        res=(i*(9/5))+32;
+                    }
+                    else if(inOp=='F' && outOp=='C')
+                    {
+                        res=(i-32)*(5/9);
+                    }
+                    else if(inOp=='F' && outOp=='K')
+                    {
+                        res=((i-273)*(2/45))+32;
+                    }
+                    else if(inOp=='K' && outOp=='C')
+                    {
+                        res=i-273;
+                    }
+                    else if(inOp=='K' && outOp=='F')
+                    {
+                        res=((i-32)*(45/2))+273;
+                    }
+                    else{
+                        res=i;
+                    }
+
+                    document.forms[0].elements[2].value=res;
+                }
+            </script>
+        </div>
+    </body>
+</html>

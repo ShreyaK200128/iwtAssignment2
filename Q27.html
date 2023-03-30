@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Question 27</title>
+        <style>
+            #clock {
+                height:200px;
+                width:300px;
+                margin-left:500px;
+                background-color: rgb(129, 10, 10);
+                font-size: 50px;
+                text-align: center;
+                color:white;
+            }
+            h1 {
+                font-size: 50px;
+                margin-left: 500px;
+                margin-top: 100px;
+                color: brown;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>The Time is...</h1>
+        <div id="clock">
+            
+        </div>
+        <script>
+            function clock()
+            {
+                d= new Date();
+                hr= d.getHours();
+                mm= d.getMinutes();
+                ss= d.getSeconds();
+                if(ss>9)
+                cTime= hr+":"+mm+":"+ss;
+                else
+                cTime= hr+":"+mm+":0"+ss;
+                x= document.getElementById('clock');
+                x.innerHTML= cTime;
+            }
+            setInterval(clock,1000);
+        </script>
+    </body>
+</html>

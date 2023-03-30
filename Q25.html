@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>Question 25</title>
+        <style>
+            h2{
+                margin-left: 530px;
+                color: blue;
+            }
+            div{
+                height:550px;
+                width:300px;
+                margin-left: 475px;
+                border: 3px rgb(22, 9, 89) solid;
+            }
+            form{
+                padding: 3px;
+            }
+            input{
+                margin: 5px;
+                height:7%;
+                width:95%;
+            }
+            button{
+                margin-top: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Registration form</h2>
+        <div>
+            <form>
+                First Name: <input type="text" placeholder="First name" id="fname">
+                Last Name: <input type="text" placeholder="Last name" id="lname">
+                User ID: <input type="text" placeholder="User id" id="uid">
+                Password: <input type="password" placeholder="password" id="password1">
+                Confirm password: <input type="password" placeholder="confirm" id="password2">
+                Address: <input type="text" placeholder="Address">
+                Email ID: <input type="email" placeholder="Email id">
+                Contact Number: <input type="number" placeholder="Contact number">
+            </form>
+            <button onclick="validate()"> Submit</button>
+            <script>
+                function validate()
+                {
+                    var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+                    var name1 = document.getElementById('fname').value;
+                    var name2 = document.getElementById('lname').value;
+                    var name3 = document.getElementById('uid').value;
+                    if(!regName.test(name1)){
+                         alert('Invalid name given.');
+                    }else{
+                         alert('Valid name given.');
+                    }
+
+                    if(!regName.test(name2)){
+                         alert('Invalid name given.');
+                    }else{
+                         alert('Valid name given.');
+                    }
+
+                    if(!regName.test(name3)){
+                         alert('Invalid name given.');
+                    }else{
+                         alert('Valid name given.');
+                    }
+
+                    var pass1= document.getElementById('password1').value;
+                    var pass2= document.getElementById('password2').value;
+                    var passw=  /^[A-Za-z]\w{7,14}$/;
+                    if(pass1.value.match(passw)) 
+                    { 
+                        alert('Correct, try another...')
+                    }
+                    else
+                    { 
+                        alert('Wrong...!')
+                    }
+
+                    if(pass2.value.match(pass1)) 
+                    { 
+                        alert('Correct, try another...')
+                    }
+                    else
+                    { 
+                        alert('Wrong...!')
+                    }
+
+                    var em=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                    var email= document.getElementById('em1').value;
+                    if(email.value.match(em)) 
+                    { 
+                        alert('Correct!!!');
+                    }
+                    else
+                    { 
+                        alert('Wrong!, try again!');
+                    }
+
+                    var phoneno = /^\d{10}$/;
+                    var pno= document.getElementById('pno1').value;
+                    if(pno.value.match(phoneno)) 
+                    { 
+                        alert('Correct!!!');
+                    }
+                    else
+                    { 
+                        alert('Wrong!, try again!');
+                    }
+                }
+            </script>
+        </div>
+    </body>
+</html>

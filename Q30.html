@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Question 30</title>
+        <style>
+            div{
+                background-color: rgb(219, 181, 11);
+                height:300px;
+                width:400px;
+                font-size: 25px;
+                border: 5px black solid;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            div input{
+                margin-left: 100px;
+                margin-top: 70px;
+            }
+            div button{
+                margin-left: 160px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <label>Guess a number between 1 and 1000!!!</label>
+            <hr>
+            <form>
+                <input type="number">
+            </form>
+            <button onclick="check()">Check</button>
+        </div>
+        <script>
+            m=Math.floor(1000*Math.random());
+            function check()
+            {
+
+                i=document.forms[0].elements[0].value;
+                if(i>m)
+                {
+                    alert("Too high!! Try again.");
+                }            
+                else if(i<m)
+                {
+                    alert("Too low!! Try again.");
+                }
+                else if(i==m){
+                    alert("Congratulations!!!");
+                }
+                else{
+                    alert("error");
+                }
+            }
+        </script>
+    </body>
+</html>

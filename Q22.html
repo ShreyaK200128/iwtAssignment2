@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style>
+            .container{
+                display:flex;
+            }
+            .inner1{
+                background-color: black;
+                color: white;
+                height:100px;
+                width:100px;
+                font-size: 30px;
+            }
+            .inner2{
+                background-color: white;
+                color: black;
+                height:100px;
+                width:100px;
+                font-size: 30px;
+            }
+            .inner1:hover, .inner2:hover{
+                color: bisque;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            
+        </div>
+        <script type="text/javascript">
+            rows=prompt("Enter the number of rows");
+            column= prompt("Enter the number of columns");
+            for(i=0;i<=rows;i++)
+            {
+                document.write("<div class='container'>");
+                 for(j=1;j<=column;j++)
+                    if((i+j)%2==0)
+                     document.write("<div class=inner1> </div>");
+                    else
+                     document.write("<div class=inner2> </div>");
+                document.write("</div>");
+            }
+        </script>
+    </body>
+</html>

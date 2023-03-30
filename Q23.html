@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .card {
+                width:33%;
+                box-shadow: 2px 2px 4px black;
+                padding: 2px;
+            }
+            .card img {
+                width:100%;
+            }
+            .desc {
+                padding: 10px;
+            }
+            .date{
+                background-color: rgba(23,34,234,.8);
+                width:80px;
+                height: 50px;
+                font-size: 40px;
+                color:white;
+                position: absolute
+                top: 37%;
+                left:5%;
+                transform:rotate(-5deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class='card'>
+            <img src="images\4.jpg">
+            <div class='desc'>
+                <h1>Title</h1>
+                <p>Introduction</p>
+            </div>
+        </div>
+        <script>
+            images = ["4.jpg", "2.jpeg", "6.jpg"]
+            titles=["Annual Function", "Good lecture"]
+            for(i=1;i<=3;i++)
+             {
+               card ="<div class='card'>"
+                    + "<img src='images\ "+images[i]+" '/>"
+                    + "<div class='desc'>"
+                        +"<h1>"+titles[i]+"</h1>"
+                        +"<p> Introduction</p>"
+                    +"</div> </div>";
+               
+                document.write(card);
+             }
+        </script>
+    </body>
+</html>

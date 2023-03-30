@@ -1,0 +1,25 @@
+div {
+    background-image:linear-gradient(180deg, rgb(200, 0, 130), rgb(216, 186, 211)); /*url("https://images.pexels.com/photos/414667/pexels-photo-414667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");*/
+}
+h1 {
+font-size: 30px;
+font-weight: bolder;
+color: rgb(237, 241, 158);
+}
+h2 {
+font-size: 20px;
+color: indigo;
+}
+.p1 {
+font-size: 15px;
+color: bisque;
+line-height: 2.0;
+}
+.p2 {
+font-size: 15px;
+color: rgb(253, 228, 183);
+line-height: 2.0;
+}
+b {
+color: rgb(52, 17, 24);
+}
